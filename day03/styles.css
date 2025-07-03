@@ -1,0 +1,93 @@
+h2 {
+  color: blue;
+}
+
+/* id값을 불러올때는 (#) , class값을 불러올때는 (.) , 
+모든 선택자는 별표(*) */
+#header-title {
+  font-size: 52px;
+  color: purple;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.link {
+  font-size: 24px;
+  color: #9a289e;
+}
+
+* {
+  margin: 2px;
+  padding: 2px;
+}
+
+/* 후손태그는 나열, 자식태그는 ( > ) 사용한다. */
+
+/* 링크대그 바로 아래 있는 a(링크) 설정변경 (자식태그) */
+.link > a {
+  text-decoration: underline;
+}
+
+/* 헤더태그 아래 어딘가에 있는 ul 설정 변경 (후손태그) */
+header ul {
+  background-color: beige;
+}
+
+/* 시멘틱 태그도 지정가능 */
+header {
+  border: 3px solid green;
+}
+
+.article-title {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* 속성의 경우에는 대괄호 사용 */
+[type="text"] {
+  border: 1px dotted gray;
+}
+
+/* href뒤에 *을 주고 문자를 주면 
+그 문자를 포함한 모든 href에 스타일을 적용한다 */
+[href*="example"] {
+  color: red;
+}
+
+[name="useremail"] {
+  background-color: aqua;
+}
+
+#container .container-btn {
+  font: size 20px;
+}
+
+#container .container-btn :hover {
+  font-size: 23px;
+  cursor: pointer;
+  background-color: darkgray;
+}
+
+#container .container-item {
+  font-size: 20px;
+}
+
+/* 컨테이너 - 컨테이너 아이템 중 
+첫번째 자식만 글자크기 24 / last차일드의 경우 마지막 자식만 적용가능 */
+#container .container-item:first-child {
+  font-size: 24px;
+}
+
+/* 지정된 선택지의 앞/뒤에 명령
+ ex1) 컨텐츠 앞에 🚀을 넣어라
+ ex2) 컨텐츠 뒤에 !!!를 넣어라 */
+#container .container-item::before {
+  content: "🚀";
+}
+
+#container .container-item::after {
+  content: "!!!";
+}
