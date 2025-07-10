@@ -78,3 +78,4 @@ console.log(`Final Score: ${finalScore}`);
 console.log(`Grade: ${grade}`);
 console.log(`Status: ${status}`);
 console.log(`Message: ${massage}`);
+console.log('massage :', massage);
