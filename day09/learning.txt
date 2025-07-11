@@ -1,0 +1,81 @@
+변수
+
+var
+let
+const
+
+=======
+var
+    - 재선언 및 재할당 가능
+    - 현대적 코드에서는 사용 지양
+var name="홍길동";
+var name="김영희"; // name을 재 선언 가능
+name = "이철수" // name에 "이철수"라고 재할당 가능
+var name; // 추후에 입력될 예정 (undefined)
+
+let
+    - 재선언 불가
+    - 재할당 가능
+    - 명확한 스코프, 변수 변경 시 유용
+let age = 25;
+let age = 30; // age를 재선언 불가 - 오류
+age = 30; // age에 30을 재할당 가능
+let age; // 추후에 입력될 예정 (undefined)
+
+const
+    - 재선언 불가
+    - 재할당 불가
+    - 객체/배열의 내부 속성은 변경 가능
+const gender = "남성"
+const gender = "여성" // gender을 재선언 불가 - 오류
+gender = "여성" // gender에 "여성"을 재할당 불가 - 오류
+
+const user = {name:"홍길동"};
+    -> user.name="김영희"  // 객체 내부의 속성인 name을 "김영희"로 변경은 가능
+
+====== 호출시 답변
+console.log(name);
+    - var로 선언 및 할당
+    - 홍길동이었다가 김영희였다가 최종 변경된 이철수 출력
+
+age = 45;
+    - let으로 선언한 age의 값을 45로 할당
+
+console.log(age);
+    - 방금전 할당한 값인 45 출력
+
+===============
+
+이스케이프 문자
+    - html에서 <br>처럼 ""안의 문자 에서 사용되는 명령어 같은거
+    - \n ->줄 바꿈  "동해물과 /n 백두산이"
+    - \t ->탭 "동해물과 /t 백두산이"
+
+백틱 사용
+    - 키보드 좌측 탭키 위의 백틱(`)을 사용한 문법
+    - 엔터를 누르면 줄바꿈 적용
+    - ${} 문법을 이용해 문자열에 변수 또는 식을 넣음
+`나의 이름은 ${name}이며, 나이는 ${age}입니다. 또는 나이를 ${30+10}으로 표현할 수 있습니다.`
+
+객체 - 배열
+    - 복수의 데잍를 정의할 수 있는 자료형
+    - 배열로 정의한 데이터를 요소
+    - 배열 요소에 접근하려면 인덱스(index)를 이용
+    - 인덱스 숫자는 0부터 시작
+let studentScore = [80, 90, 40, 60]
+
+객체 - 리터럴
+    - 객체를 정의할 때 중괄호 사용
+    - 중괄호 안에는 키(key)와 값(value)의 한 쌍으로 이루어진 속성(property)이 들어감
+let studentScore = {
+    koreanScore:80,
+    englishScore:70,
+    mathScore:90,
+    scienceScore:60
+};
+
+console.log(studentScore.koreanScore);
+    - studentScore객체 안의 koreanScore키에 대한 값인 80 출력
+
+
+
