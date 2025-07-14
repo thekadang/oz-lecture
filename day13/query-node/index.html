@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>day 13 query-node</title>
+  </head>
+  <body>
+    <article class="box-1">
+      <p class="text">text1</p>
+      <p class="text">text2</p>
+    </article>
+    <article class="box-2">
+      <p class="text">이 문장은 <span class="inner" style="color:blue">파란색</span>을 강조합니다.</p>
+      <p class="text">text2</p>
+    </article>
+    <script>
+      // box클래스 안에서 text클래스를 가진 첫 번째 p 태그 찾기 // 수업 중 학생이 알려준거 포함
+    //   const box2els = document.getElementsByClassName("box2");
+    //   console.log(box2els);
+    //   console.log(box2els[0]);
+    //   console.log(box2els[0].children[0]);
+    //   const box2el = box2els[0];
+
+      // 강사가 만든 코드
+         // box-2의 class가 text를 포함한 첫번째 p 태그를 찾고싶음
+    //   const box2els = document.getElementsByClassName("box-2"); // []
+    //   console.log(box2els);
+    //   const box2el = box2els[0];
+    //   console.log(box2el);
+    //   const textEls = box2el.children;
+    //   console.log(textEls);
+    //   const firstTextEls = textEls[0];
+    //   console.log(firstTextEls);
+    //   const firntTextElsContents = firstTextEls.textContent;
+    //   console.log("getEls: ", firntTextElsContents);
+
+    //   const shortExp =
+    //     document.getElementsByClassName("box-2")[0].children[0].textContent;
+    //   console.log(shortExp);
+    //   console.log("getEls-short: ", firntTextElsContents);
+
+      // query 매소드로 dom 객체 가져오기
+      const queryNode = document.querySelector(".box-2 .text:first-child");
+      console.log(queryNode);
+
+      const queryTextEls = document.querySelectorAll(".text");
+      console.log(queryTextEls);
+
+      // textContent, innerHtml, innerText
+      const box2TextEl = document.querySelector(".box-2 .text:first-child");
+      console.log("textContent", box2TextEl.textContent);
+      console.log("innerHtml", box2TextEl.innerHTML);
+      console.log("innerText", box2TextEl.innerText);
+
+
+    </script>
+  </body>
+</html>
