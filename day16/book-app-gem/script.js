@@ -138,7 +138,7 @@ function toggleRental(button) {
 
 // 모든 대여 상태 표시
 function showAllRentalStatus() {
-    const results Tyre resultsDiv = document.getElementById('results');
+    const resultsDiv = document.getElementById('results');
     let html = '<h3>대여 상태:</h3><ul>';
     if (rentals.length === 0) {
         html += '<li>대여 정보가 없습니다.</li>';
